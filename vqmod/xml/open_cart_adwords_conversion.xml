@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<modification>
+
+	<id>Opencart_Adwords_Conversion</id>
+
+	<version>3.4</version>
+
+	<vqmver>2.5.1</vqmver>
+
+	<author>Wagner Martins - wagnorama@gmail.com</author>
+
+	<!-- Beginning: catalog/controller/checkout/confirm.php -->
+
+	<file name="catalog/controller/checkout/confirm.php">
+
+		<operation>
+
+			<search position="after" index="1"><![CDATA[$data['totals'] = array();]]></search>
+
+			<add><![CDATA[
+			
+	         //add total order in session - wg
+			$totalOrder = 1;
+            $this->session->data['totalOrder'] = $total;
+
+			]]></add>
+
+		</operation>
+
+
+	</file>
+
+	<!-- End: catalog/controller/checkout/confirm.php -->
+
+
+</modification>
